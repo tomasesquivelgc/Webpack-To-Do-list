@@ -1,45 +1,33 @@
 import _ from 'lodash';
-import printMe from './print.js';
 import './style.css';
-import Icon from './icon.png';
 
 let array = [
   {
-    description: "",
+    description: "hello",
     completed: false,
     index: 0
   },
   {
-    description: "",
+    description: "world",
     completed: false,
-    index: 1
+    index: 3
   },
   {
-    description: "",
+    description: "lorem",
     completed: false,
     index: 2
   },
 ];
 
-function component() {
-  const element = document.createElement('div');
-  const btn = document.createElement('button');
+function populate() {
+  const list = document.getElementById('list');
+  array.sort((a, b) => a.index - b.index);
 
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
-
-  // Add the image to our existing div.
-  const myIcon = new Image();
-  myIcon.src = Icon;
-
-  element.appendChild(myIcon);
-
-  btn.innerHTML = 'Click me and check the console!';
-  btn.onclick = printMe;
-
-  element.appendChild(btn);
-
-  return element;
+  for (let i=0; i<array.length; i+=1){
+    const newLi = document.createElement('li');
+    newLi.innerHTML = array[i].description;
+    list.appendChild(newLi);
+  }
 }
 
-document.body.appendChild(component());
+document.body.appendChild(populate());
