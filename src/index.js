@@ -1,31 +1,34 @@
-import _ from 'lodash';
+//import _ from 'lodash';
 import './style.css';
 
-let array = [
+const array = [
   {
-    description: "hello",
+    description: 'hello',
     completed: false,
-    index: 0
+    index: 0,
   },
   {
-    description: "world",
+    description: 'world',
     completed: false,
-    index: 1
+    index: 1,
   },
   {
-    description: "lorem",
+    description: 'lorem',
     completed: false,
-    index: 2
+    index: 2,
   },
 ];
 
 function populate() {
   const list = document.getElementById('list');
-  array.sort((a, b) => a.index - b.index);
   const listTitle = document.createElement('h2');
   listTitle.innerHTML = "Today's To-Do";
+  const addChore = document.createElement('form');
+  addChore.innerHTML = "<input type='text' placeholder='Add to your list'></input>";
   list.appendChild(listTitle);
-  for (let i=0; i<array.length; i+=1){
+  list.appendChild(addChore);
+  array.sort((a, b) => a.index - b.index);
+  for (let i = 0; i < array.length; i += 1) {
     const newLi = document.createElement('li');
     newLi.innerHTML = array[i].description;
     list.appendChild(newLi);
