@@ -3,6 +3,24 @@ import printMe from './print.js';
 import './style.css';
 import Icon from './icon.png';
 
+let array = [
+  {
+    description: "",
+    completed: false,
+    index: 0
+  },
+  {
+    description: "",
+    completed: false,
+    index: 1
+  },
+  {
+    description: "",
+    completed: false,
+    index: 2
+  },
+];
+
 function component() {
   const element = document.createElement('div');
   const btn = document.createElement('button');
