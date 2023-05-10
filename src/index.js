@@ -1,4 +1,4 @@
-//import _ from 'lodash';
+// import _ from 'lodash';
 import './style.css';
 
 const array = [
@@ -28,7 +28,6 @@ function populate() {
   addChore.classList.add('addChore');
   list.appendChild(listTitle);
   list.appendChild(addChore);
-
 
   array.sort((a, b) => a.index - b.index);
   for (let i = 0; i < array.length; i += 1) {
