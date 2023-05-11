@@ -39,7 +39,6 @@ function populate() {
   const clearBtnn = document.createElement('li');
   clearBtnn.innerHTML = '<a href="#">Clear all completed tasks</a>';
   list.appendChild(clearBtnn);
-
 }
 
 export default populate;
