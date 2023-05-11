@@ -16,7 +16,6 @@ const array = [
   },
 ];
 
-
 function populate() {
   const list = document.getElementById('list');
   const listTitle = document.createElement('li');
