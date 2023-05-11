@@ -1,5 +1,6 @@
 import icon from './drag_icon.svg';
 import refresh from './refresh_icon.svg';
+
 function populate() {
   const array = [
     {
@@ -49,7 +50,7 @@ function populate() {
 
   const clearBtnn = document.createElement('li');
   clearBtnn.innerHTML = '<a href="#">Clear all completed tasks</a>';
-  clearBtnn.classList.add("clearBtnn");
+  clearBtnn.classList.add('clearBtnn');
   list.appendChild(clearBtnn);
 }
 
