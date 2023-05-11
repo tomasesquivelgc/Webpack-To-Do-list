@@ -1,25 +1,24 @@
 import icon from './drag_icon.svg';
 import refresh from './refresh_icon.svg';
 
+const array = [
+  {
+    description: 'Do the dishes',
+    completed: false,
+    index: 0,
+  },
+  {
+    description: 'Do the laundry',
+    completed: false,
+    index: 1,
+  },
+  {
+    description: 'Walk the dog',
+    completed: false,
+    index: 2,
+  },
+];
 function populate() {
-  const array = [
-    {
-      description: 'Do the dishes',
-      completed: false,
-      index: 0,
-    },
-    {
-      description: 'Do the laundry',
-      completed: false,
-      index: 1,
-    },
-    {
-      description: 'Walk the dog',
-      completed: false,
-      index: 2,
-    },
-  ];
-
   const list = document.getElementById('list');
   const listTitle = document.createElement('li');
   const refreshIcon = new Image();
