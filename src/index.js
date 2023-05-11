@@ -1,6 +1,6 @@
 // import _ from 'lodash';
 import './style.css';
-
+import populate from './populate';
 const array = [
   {
     description: 'Do the dishes',
@@ -19,25 +19,5 @@ const array = [
   },
 ];
 
-function populate() {
-  const list = document.getElementById('list');
-  const listTitle = document.createElement('li');
-  listTitle.innerHTML = "Today's To Do";
-  const addChore = document.createElement('li');
-  addChore.innerHTML = "<input type='text' placeholder='Add to your list...'></input>";
-  addChore.classList.add('addChore');
-  list.appendChild(listTitle);
-  list.appendChild(addChore);
-
-  array.sort((a, b) => a.index - b.index);
-  for (let i = 0; i < array.length; i += 1) {
-    const newLi = document.createElement('li');
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    newLi.appendChild(checkbox);
-    newLi.innerHTML += array[i].description;
-    list.appendChild(newLi);
-  }
-}
 
 document.body.appendChild(populate());

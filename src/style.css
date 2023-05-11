@@ -20,3 +20,8 @@
   border: none;
   font-size: 1.2rem;
 }
+
+h1 {
+  text-align: center;
+  border-bottom: 1px solid black;
+}
