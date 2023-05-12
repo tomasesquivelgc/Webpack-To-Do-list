@@ -20,15 +20,9 @@ const array = [
 ];
 function populate() {
   const list = document.getElementById('list');
-  const listTitle = document.createElement('li');
-  const refreshIcon = new Image();
-  refreshIcon.src = refresh;
-  listTitle.innerHTML = "Today's To Do";
-  listTitle.appendChild(refreshIcon);
   const addChore = document.createElement('li');
   addChore.innerHTML = "<input type='text' placeholder='Add to your list...'></input>";
   addChore.classList.add('addChore');
-  list.appendChild(listTitle);
   list.appendChild(addChore);
 
   array.sort((a, b) => a.index - b.index);
