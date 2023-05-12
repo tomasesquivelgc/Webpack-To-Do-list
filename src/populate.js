@@ -1,5 +1,4 @@
 import icon from './drag_icon.svg';
-import refresh from './refresh_icon.svg';
 
 const array = [
   {
@@ -19,12 +18,6 @@ const array = [
   },
 ];
 function populate() {
-  const list = document.getElementById('list');
-  const addChore = document.createElement('li');
-  addChore.innerHTML = "<input type='text' placeholder='Add to your list...'></input>";
-  addChore.classList.add('addChore');
-  list.appendChild(addChore);
-
   array.sort((a, b) => a.index - b.index);
   for (let i = 0; i < array.length; i += 1) {
     const newLi = document.createElement('li');
