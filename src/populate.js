@@ -38,6 +38,11 @@ class TaskList extends Array {
       deleteIconImg.addEventListener('click', () => {
         this.removeTask(i);
       });
+
+      description.addEventListener('change', (event) => {
+        const newDescription = event.target.value;
+        this[i].description = newDescription;
+      });
     }
   }
 
