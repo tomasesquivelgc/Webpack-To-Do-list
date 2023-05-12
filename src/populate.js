@@ -1,4 +1,5 @@
 import icon from './drag_icon.svg';
+const list = document.getElementById('list');
 
 class TaskList extends Array {
   constructor() {
@@ -24,6 +25,7 @@ class TaskList extends Array {
 
   render() {
     this.sort((a, b) => a.index - b.index);
+    list.innerHTML='';
     for (let i = 0; i < this.length; i += 1) {
       const newLi = document.createElement('li');
       const checkboxDescriptionDiv = document.createElement('div');
