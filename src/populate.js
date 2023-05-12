@@ -33,11 +33,6 @@ function populate() {
     newLi.appendChild(iconImg);
     list.appendChild(newLi);
   }
-
-  const clearBtnn = document.createElement('li');
-  clearBtnn.innerHTML = '<a href="#">Clear all completed tasks</a>';
-  clearBtnn.classList.add('clearBtnn');
-  list.appendChild(clearBtnn);
 }
 
 export default populate;
