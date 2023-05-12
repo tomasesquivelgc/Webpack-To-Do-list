@@ -1,4 +1,5 @@
-import icon from './drag_icon.svg';
+import drag_icon from './images/drag_icon.svg';
+import deleteIcon from './images/delete.svg';
 const list = document.getElementById('list');
 
 class TaskList extends Array {
@@ -15,12 +16,16 @@ class TaskList extends Array {
       const checkbox = document.createElement('input');
       checkbox.type = 'checkbox';
       const description = document.createTextNode(this[i].description);
-      const iconImg = new Image();
-      iconImg.src = icon;
+      const drag_iconImg = new Image();
+      drag_iconImg.src = drag_icon;
+      const deleteIconImg = new Image();
+      deleteIconImg.src = deleteIcon;
+      deleteIconImg.classList.add('deleteBtnn');
       checkboxDescriptionDiv.appendChild(checkbox);
       checkboxDescriptionDiv.appendChild(description);
       newLi.appendChild(checkboxDescriptionDiv);
-      newLi.appendChild(iconImg);
+      newLi.appendChild(deleteIconImg);
+      newLi.appendChild(drag_iconImg);
       list.appendChild(newLi);
     }
   }
