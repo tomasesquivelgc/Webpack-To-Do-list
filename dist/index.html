@@ -6,7 +6,11 @@
     <title>Wbpack Exercise</title>
 <script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script></head>
 <body>
-    <h1>My To Do list</h1>
-    <ul id="list" class="list"></ul>
+    <div id="main" class="main">
+        <h1>Today's To Do <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 96 960 960" width="48"><path d="M480 896q-133 0-226.5-93.5T160 576q0-133 93.5-226.5T480 256q85 0 149 34.5T740 385V256h60v254H546v-60h168q-38-60-97-97t-137-37q-109 0-184.5 75.5T220 576q0 109 75.5 184.5T480 836q83 0 152-47.5T728 663h62q-29 105-115 169t-195 64Z"/></svg></h1>
+        <input type='text' placeholder='Add to your list...' class="addChore"></input>
+        <ul id="list" class="list"></ul>
+        <button class="clearBtnn">Clear all completed tasks</button>
+    </div>
 </body>
 </html>

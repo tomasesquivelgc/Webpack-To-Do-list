@@ -1,6 +1,6 @@
 import './style.css';
 import TaskList from './populate.js';
-
+import Task from './Task';
 
   const newChore = document.querySelector('.addChore');
   const newList = new TaskList();
@@ -10,11 +10,7 @@ import TaskList from './populate.js';
     if (event.key === 'Enter') {
       const description = newChore.value.trim();
       if (description !== '') {
-        const task = {
-          description,
-          completed: false,
-          index: newList.length,
-        };
+        const task = new Task(description, false, newList.length);
         newList.addTask(task);
         newList.render();
         newChore.value = '';
