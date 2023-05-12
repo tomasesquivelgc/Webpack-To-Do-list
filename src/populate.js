@@ -1,11 +1,9 @@
 import icon from './drag_icon.svg';
-import Task from './Task';
 const list = document.getElementById('list');
 
 class TaskList extends Array {
   constructor() {
     super();
-    this.push(new Task("hello workd", false, this.length));
   }
 
   render() {
