@@ -17,7 +17,10 @@ class TaskList extends Array {
       const checkboxDescriptionDiv = document.createElement('div');
       const checkbox = document.createElement('input');
       checkbox.type = 'checkbox';
-      const description = document.createTextNode(this[i].description);
+      const description = document.createElement('input');
+      description.type = 'text';
+      description.value = this[i].description;
+      description.classList.add('taskDescription');
       const drag_iconImg = new Image();
       drag_iconImg.src = drag_icon;
       const deleteIconImg = new Image();
