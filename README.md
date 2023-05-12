@@ -61,6 +61,13 @@ Webpack minimalist is a Webpack based project that emulates this [minimalist](ht
 - **[Basic list structure]**
 - **[Checkbox on each list item]**
 
+
+### New features 
+
+ - add and delete methods created
+ - task description editable
+ - save and load localStorage methods created
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
