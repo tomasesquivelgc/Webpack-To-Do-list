@@ -5,6 +5,7 @@ const list = document.getElementById('list');
 class TaskList extends Array {
   constructor() {
     super();
+    this.loadTasksFromLocalStorage();
   }
 
   render() {
@@ -42,8 +43,10 @@ class TaskList extends Array {
       description.addEventListener('change', (event) => {
         const newDescription = event.target.value;
         this[i].description = newDescription;
+        this.saveTasksToLocalStorage();
       });
     }
+    this.saveTasksToLocalStorage();
   }
 
   addTask(task) {
@@ -59,6 +62,20 @@ class TaskList extends Array {
       this[i].index = i+1;
     }
     this.render();
+  }
+
+  loadTasksFromLocalStorage() {
+    const tasks = JSON.parse(localStorage.getItem('tasks'));
+    if (tasks) {
+      tasks.forEach((task) => {
+        this.push(task);
+      });
+      this.render();
+    }
+  }
+
+  saveTasksToLocalStorage() {
+    localStorage.setItem('tasks', JSON.stringify(this));
   }
 }
 
