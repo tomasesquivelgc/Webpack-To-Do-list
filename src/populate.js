@@ -34,7 +34,6 @@ class TaskList extends Array {
 
       deleteIconImg.addEventListener('click', () => {
         this.removeTask(i);
-        console.log('removed');
       });
     }
   }
@@ -44,8 +43,13 @@ class TaskList extends Array {
     this.render();
   }
 
-  removeTask(index) {
-    this.splice(index, 1);
+  removeTask(position) {
+    const task = this[position]; 
+    console.log(task.index);
+    this.splice(position, 1);
+    for (let i=0; i<this.length; i++){
+      this[i].index = i+1;
+    }
     this.render();
   }
 }
