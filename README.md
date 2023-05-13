@@ -68,6 +68,11 @@ Webpack minimalist is a Webpack based project that emulates this [minimalist](ht
  - task description editable
  - save and load localStorage methods created
 
+ #### Interactive update
+
+  - Checkboxes completed status
+  - Clear all button
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
@@ -133,7 +138,7 @@ You can deploy this project using github pages
 > Describe 1 - 3 features you will add to the project.
 
 - [ ] **[drag and drop order]**
-- [ ] **[clear button function]**
+- [X] **[clear button function]**
 - [ ] **[cross completed task]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
