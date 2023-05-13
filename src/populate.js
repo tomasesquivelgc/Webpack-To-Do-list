@@ -1,5 +1,6 @@
 import dragIcon from './images/drag_icon.svg';
 import deleteIcon from './images/delete.svg';
+import toggleCompleted from './complete-task.js';
 
 const list = document.getElementById('list');
 
@@ -16,19 +17,24 @@ class TaskList extends Array {
       // create li element
       const newLi = document.createElement('li');
       // create neccesary items
+        //checkbox
       const checkboxDescriptionDiv = document.createElement('div');
       const checkbox = document.createElement('input');
       checkbox.type = 'checkbox';
+      checkbox.classList.add('change');
+        //task description
       const description = document.createElement('input');
       description.type = 'text';
       description.value = this[i].description;
       description.classList.add('taskDescription');
+        //images
       const dragIconImg = new Image();
       dragIconImg.src = dragIcon;
       const deleteIconImg = new Image();
       deleteIconImg.src = deleteIcon;
       deleteIconImg.classList.add('deleteBtnn');
       deleteIconImg.setAttribute('data-id', i);
+        //checkboxDescription attach
       checkboxDescriptionDiv.appendChild(checkbox);
       checkboxDescriptionDiv.appendChild(description);
       // append the items to the li and provide functionality
@@ -44,6 +50,12 @@ class TaskList extends Array {
       description.addEventListener('change', (event) => {
         const newDescription = event.target.value;
         this[i].description = newDescription;
+        this.saveTasksToLocalStorage();
+      });
+
+      checkbox.addEventListener('change', (event) => {
+        
+        this.toggleCompleted(i);
         this.saveTasksToLocalStorage();
       });
     }
@@ -76,6 +88,11 @@ class TaskList extends Array {
   saveTasksToLocalStorage() {
     localStorage.setItem('tasks', JSON.stringify(this));
   }
+
+  toggleCompleted(id) {
+    this[id].completed = !this[id].completed;
+  }
+
 }
 
 export default TaskList;
