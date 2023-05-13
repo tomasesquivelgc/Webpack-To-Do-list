@@ -1,7 +1,7 @@
 import dragIcon from './images/drag_icon.svg';
 import deleteIcon from './images/delete.svg';
 import toggleCompleted from './complete-task.js';
-import Task from './Task.js';
+import deleteCompletedTasks from './delete-completed-tasks.js'
 
 const list = document.getElementById('list');
 
@@ -100,15 +100,7 @@ class TaskList extends Array {
   }
 
   deleteCompletedTasks() {
-    let newArray = [];
-    for (let i=0; i<this.length; i+=1) {
-      if (this[i].completed === false) {
-        newArray.push(this[i]);
-      }
-    }
-    console.log(newArray);
-    this.length = 0;
-    this.push(...newArray);
+    deleteCompletedTasks(this);
     this.saveTasksToLocalStorage();
     this.render();
   }
