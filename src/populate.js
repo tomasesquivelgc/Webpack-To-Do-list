@@ -22,6 +22,9 @@ class TaskList extends Array {
       const checkbox = document.createElement('input');
       checkbox.type = 'checkbox';
       checkbox.classList.add('change');
+      if(this[i].completed === true){
+        checkbox.checked = true;
+      };
         //task description
       const description = document.createElement('input');
       description.type = 'text';
@@ -37,6 +40,7 @@ class TaskList extends Array {
         //checkboxDescription attach
       checkboxDescriptionDiv.appendChild(checkbox);
       checkboxDescriptionDiv.appendChild(description);
+      checkboxDescriptionDiv.classList.add('checkboxDescription')
       // append the items to the li and provide functionality
       newLi.appendChild(checkboxDescriptionDiv);
       newLi.appendChild(deleteIconImg);
@@ -53,8 +57,7 @@ class TaskList extends Array {
         this.saveTasksToLocalStorage();
       });
 
-      checkbox.addEventListener('change', (event) => {
-        
+      checkbox.addEventListener('change', () => { 
         this.toggleCompleted(i);
         this.saveTasksToLocalStorage();
       });
