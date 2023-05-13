@@ -89,8 +89,10 @@ class TaskList extends Array {
     localStorage.setItem('tasks', JSON.stringify(this));
   }
 
-  toggleCompleted(id) {
-    this[id].completed = !this[id].completed;
+  toggleCompleted(index) {
+    const task = this[index];
+    toggleCompleted(task);
+    this.saveTasksToLocalStorage();
   }
 
 }

@@ -1,7 +1,5 @@
-let toggleCompleted = (index)  => {
-  const taskToComplete = this[index];
-  task.completed = !taskToComplete.completed;
-  console.log(index);
-}
+const toggleCompleted = (task) => {
+  task.completed = !task.completed;
+};
 
 export default toggleCompleted;
