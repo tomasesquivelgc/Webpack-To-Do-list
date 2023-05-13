@@ -4,6 +4,7 @@ import Task from './Task.js';
 
 const newChore = document.querySelector('.addChore');
 const newList = new TaskList();
+const deleteButonn = document.querySelector('.clearBtnn');
 newList.render();
 
 newChore.addEventListener('keydown', (event) => {
@@ -15,4 +16,8 @@ newChore.addEventListener('keydown', (event) => {
       newChore.value = '';
     }
   }
+});
+
+deleteButonn.addEventListener('click', () => {
+  newList.deleteCompletedTasks();
 });

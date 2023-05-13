@@ -1,0 +1,1 @@
+const checkBoxes = document.querySelectorAll();

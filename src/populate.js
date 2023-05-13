@@ -98,6 +98,14 @@ class TaskList extends Array {
     this.saveTasksToLocalStorage();
   }
 
+  deleteCompletedTasks() {
+    console.log(this.length);
+    const filteredTaskList = this.filter((task) => !task.completed);
+  console.log(filteredTaskList);
+  this.saveTasksToLocalStorage();
+  this.render();
+  console.log(this.length);
+  }
 }
 
 export default TaskList;
