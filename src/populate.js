@@ -1,8 +1,7 @@
 import dragIcon from './images/drag_icon.svg';
 import deleteIcon from './images/delete.svg';
 import toggleCompleted from './complete-task.js';
-import deleteCompletedTasks from './delete-completed-tasks.js';
-import deleteAllComplete from './modules/delete-complete-tasks';
+import deleteAllComplete from './modules/delete-complete-tasks.js';
 
 const list = document.getElementById('list');
 
