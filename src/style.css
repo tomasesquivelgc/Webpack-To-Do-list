@@ -22,8 +22,8 @@
   justify-content: space-between;
 }
 
-.list li div {
-  align-self: center;
+.checkboxDescription {
+  display: flex;
 }
 
 .addChore input[type="text"] {
