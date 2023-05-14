@@ -1,12 +1,6 @@
 const deleteAllCompleted = (task) => {
-  const newArray = [];
-  for (let i = 0; i < task.length; i += 1) {
-    if (task[i].completed === false) {
-      newArray.push(task[i]);
-    }
-  }
-  task.length = 0;
-  task.push(...newArray);
+  const filteredArray = task.filter((element) => element.completed !== true);
+  task.splice(0, task.length, ...filteredArray);
 };
 
 export default deleteAllCompleted;
