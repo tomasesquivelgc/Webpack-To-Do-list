@@ -33,7 +33,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [Webpack To-Do list] <a name="about-project"></a>
 
 Webpack minimalist is a Webpack based project that emulates this [minimalist](https://web.archive.org/web/20180320194056/http://www.getminimalist.com:80/)
 
