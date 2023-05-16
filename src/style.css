@@ -52,4 +52,5 @@ h1 {
 .taskDescription {
   border: none;
   font-size: 1.2rem;
+  max-width: 100%;
 }

@@ -8,7 +8,7 @@ module.exports = {
     Task: './src/Task.js',
     populate: './src/populate.js',
     clearAll: './src/modules/delete-complete-tasks.js',
-    checkComplete: './src/complete-task.js'
+    checkComplete: './src/complete-task.js',
   },
   devtool: 'inline-source-map',
   devServer: {
