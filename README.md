@@ -79,7 +79,7 @@ Webpack minimalist is a Webpack based project that emulates this [minimalist](ht
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-Click [here](https://tomasesquivelgc.github.io/Webpack-To-Do-list/dist/) for the live version.
+Click [here](https://tomasesquivelgc.github.io/Webpack-To-Do-list/) for the live version.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
